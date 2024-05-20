@@ -1,0 +1,39 @@
+spec:
+  containers:
+    - name: techup-service
+      image: /TECHUP_DEMO_DB/DATA_SCHEMA/TECHUP_DEMO_REPOSITORY/techup_service:latest
+      resources:
+        requests:
+          memory: 4G
+          cpu: 1
+        limits:
+          memory: 4G
+          cpu: 1
+      volumeMounts:
+      - name: memorymount
+        mountPath: /dev-memory
+      - name: stagemount
+        mountPath: /dev-stage
+      - name: localmount
+        mountPath: /dev-local
+      - name: ebsmount
+        mountPath: /dev-ebs
+  volumes:
+    - name: memorymount
+      source: memory
+      size: 4Gi
+    - name: stagemount
+      source: "@TECHUP_DEMO_FILE_STAGE"
+      uid: 1000
+      gid: 1000
+    - name: localmount
+      source: local                              
+    - name: ebsmount
+      source: block
+      size: 4Gi
+  endpoints:
+    - name: jupyter-snowpark
+      port: 8888
+      public: true
+  networkPolicyConfig:
+      allowInternetEgress: true
