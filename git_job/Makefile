@@ -1,7 +1,7 @@
 # The make file
 
 # load the various configurations from config file
-cnf ?=config.env
+cnf ?=./git_job_service_config.env
 include $(cnf)
 export $(shell sed 's/=.*//' $(cnf))
 
@@ -20,7 +20,7 @@ run_docker_locally:
 
 build_docker: ## Build the customized osrm backend container
 	export DOCKER_BUILDKIT=1
-	docker build --no-cache --platform linux/amd64 -t $(SS_SERVICE_NAME) -f Dockerfile .
+	docker build --platform linux/amd64 -t $(SS_SERVICE_NAME) -f Dockerfile .
 
 tag_docker:
 	docker tag $(SS_SERVICE_NAME) $(IMAGE_REGISTRY)/$(SS_SERVICE_NAME)
@@ -33,6 +33,7 @@ upload_yaml: ## upload yaml to stage $(SS_STAGE)
 		put file://./*.yaml @$(SS_DB).$(SS_SCHEMA).$(SS_STAGE) auto_compress=false overwrite=true; \
 		list @$(SS_DB).$(SS_SCHEMA).$(SS_STAGE); \
 		"
+
 ######################## COMPOSITE TARGETS ######################
 
 build_and_run_docker_locally: build_docker run_docker_locally

@@ -1,0 +1,15 @@
+spec:
+  container:
+  - name: main
+    image: /TECHUP_DEMO_DB/DATA_SCHEMA/TECHUP_DEMO_REPOSITORY/techup_job_service:latest
+    env:
+      SNOWFLAKE_WAREHOUSE: TECHUP_DEMO_WH
+    args:
+    - "--query=select current_time() as time,'hello'"
+    - "--result_table=results"
+    volumeMounts:
+      - name: localmount
+        mountPath: /dev-local
+  volumes:                           
+    - name: localmount
+      source: local 

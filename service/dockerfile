@@ -5,7 +5,7 @@ LABEL author=""
 RUN apt-get update && \
     apt-get install -y python3-pip
 
-RUN pip3 install JPype1 jupyter pandas numpy seaborn scipy matplotlib seaborn pyNetLogo SALib "snowflake-snowpark-python[pandas]" snowflake-connector-python
+RUN pip3 install git JPype1 jupyter pandas numpy seaborn scipy matplotlib seaborn pyNetLogo SALib "snowflake-snowpark-python[pandas]" snowflake-connector-python
 
 #Create a new user for the notebook server , NB RUN instrcution are only ever executed during the buid
 RUN useradd -ms /bin/bash jupyter   
