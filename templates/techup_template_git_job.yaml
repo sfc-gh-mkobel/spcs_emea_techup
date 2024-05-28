@@ -1,0 +1,17 @@
+spec:
+  container:
+  - name: main
+    image: /TECHUP_DEMO_DB/DATA_SCHEMA/TECHUP_DEMO_REPOSITORY/techup_git_job_service:latest
+    env:
+      SNOWFLAKE_WAREHOUSE: TECHUP_DEMO_WH
+    args:
+    - "--git_repo_url=https://github.com/sfc-gh-mkobel/python-code.git"
+    - "--repo_name=python-code"
+    - "--main_file_name={{main_file_name}}"
+    - "--volume_mounts_path=/dev-local"
+    volumeMounts:
+      - name: localmount
+        mountPath: /dev-local
+  volumes:                           
+    - name: localmount
+      source: local 

@@ -117,9 +117,6 @@ def run_job():
         # If the table already exists, the query result must match the table scheme.
         # If the table does not exist, this will create a new table.
         res.write.mode("append").save_as_table(result_table)
-    
-    
-    
     logger.info("Job finished")
 
 

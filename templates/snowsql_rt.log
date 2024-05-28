@@ -1,0 +1,519 @@
+2024-05-27 17:36:11,218 (33187/MainThread) snowflake.cli.common.util_cli DEBUG       util_cli:732  - Initialized logging. Log file './snowsql_rt.log', Namespaces: ['snowflake.cli', 'snowflake.connector', 'botocore', 'azure', '__main__', 'eventloop', 'sqlexecute']
+2024-05-27 17:36:11,218 (33187/MainThread) snowflake.cli.common.util_cli INFO       util_cli:767  - REQUESTS_CA_BUNDLE is already set to /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/_MEIaLFyVS/certifi/cacert.pem
+2024-05-27 17:36:11,219 (33187/MainThread) __main__ DEBUG      eventloop:256  - is_terminal: True, is_interactive: True
+2024-05-27 17:36:11,219 (33187/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /Users/mkobel/.snowsql/1.2.32/snowsql.cnf
+2024-05-27 17:36:11,220 (33187/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /etc/snowsql.cnf
+2024-05-27 17:36:11,220 (33187/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /etc/snowflake/snowsql.cnf
+2024-05-27 17:36:11,220 (33187/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /usr/local/etc/snowsql.cnf
+2024-05-27 17:36:11,220 (33187/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /Users/mkobel/.snowsql.cnf
+2024-05-27 17:36:11,220 (33187/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /Users/mkobel/.snowsql/config
+2024-05-27 17:36:11,221 (33187/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /Users/mkobel/.snowsql/spcs-account-config
+2024-05-27 17:36:11,221 (33187/MainThread) __main__ DEBUG      eventloop:399  - [None, 'TECHUP_DEMO_DB', None, 'TECHUP_DEMO_WH', None, 'MENY', None, 'SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO', None, None, None, None, 'data_schema', None, 'TECHUP_DEMO_ROLE', None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2024-05-27 17:36:11,221 (33187/MainThread) __main__ DEBUG      eventloop:405  - fallback to config values only if user did not specify a value and sqlexecute is connecting for the first time.
+2024-05-27 17:36:11,221 (33187/MainThread) __main__ DEBUG      eventloop:454  - host=None, port: + None
+2024-05-27 17:36:11,222 (33187/MainThread) __main__ DEBUG      eventloop:493  - prompting user, password and account if still missing
+2024-05-27 17:36:11,222 (33187/MainThread) __main__ DEBUG      eventloop:548  - init sqlexecute
+2024-05-27 17:36:11,222 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:246  - Connection DB Params: database: TECHUP_DEMO_DB, warehouse: TECHUP_DEMO_WH, user: MENY, host: SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO.snowflakecomputing.com, port: 443, region: None, account: SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO, protocol: https, schema: data_schema, role: TECHUP_DEMO_ROLE, ocsp_fail_open: True, insecure_mode: None, proxy_host: None, proxy_port: None, proxy_user: None, authenticator: SNOWFLAKE, session_parameters: {'ABORT_DETACHED_QUERY': False}, login_timeout: 120, client_session_keep_alive: False, disable_request_pooling: None, client_store_temporary_credential: None
+2024-05-27 17:36:11,222 (33187/MainThread) snowflake.connector.connection INFO     connection:386  - Snowflake Connector for Python Version: 3.7.1, Python Version: 3.8.18, Platform: macOS-14.5-x86_64-i386-64bit
+2024-05-27 17:36:11,222 (33187/MainThread) snowflake.connector.connection DEBUG     connection:681  - connect
+2024-05-27 17:36:11,222 (33187/MainThread) snowflake.connector.connection DEBUG     connection:1060 - __config
+2024-05-27 17:36:11,223 (33187/MainThread) snowflake.connector.connection INFO     connection:1211 - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-05-27 17:36:11,223 (33187/MainThread) snowflake.connector.converter DEBUG      converter:159  - use_numpy: False
+2024-05-27 17:36:11,223 (33187/MainThread) snowflake.connector.connection DEBUG     connection:887  - REST API object was created: SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO.snowflakecomputing.com:443
+2024-05-27 17:36:11,223 (33187/MainThread) snowflake.connector.auth._auth DEBUG          _auth:174  - authenticate
+2024-05-27 17:36:11,223 (33187/MainThread) snowflake.connector.auth._auth DEBUG          _auth:208  - assertion content: *********
+2024-05-27 17:36:11,223 (33187/MainThread) snowflake.connector.auth._auth DEBUG          _auth:211  - account=SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO, user=MENY, database=TECHUP_DEMO_DB, schema=data_schema, warehouse=TECHUP_DEMO_WH, role=TECHUP_DEMO_ROLE, request_id=02318e35-d8b2-4b25-b31b-858bd05a3e99
+2024-05-27 17:36:11,224 (33187/MainThread) snowflake.connector.auth._auth DEBUG          _auth:244  - body['data']: {'CLIENT_APP_ID': 'SnowSQL', 'CLIENT_APP_VERSION': '1.2.32', 'SVN_REVISION': None, 'ACCOUNT_NAME': 'SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO', 'LOGIN_NAME': 'MENY', 'CLIENT_ENVIRONMENT': {'APPLICATION': 'SnowSQL', 'OS': 'Darwin', 'OS_VERSION': 'macOS-14.5-x86_64-i386-64bit', 'PYTHON_VERSION': '3.8.18', 'PYTHON_RUNTIME': 'CPython', 'PYTHON_COMPILER': 'Clang 13.0.0 (clang-1300.0.29.30)', 'OCSP_MODE': 'FAIL_OPEN', 'TRACING': 10, 'LOGIN_TIMEOUT': 120, 'NETWORK_TIMEOUT': None, 'SOCKET_TIMEOUT': None}, 'SESSION_PARAMETERS': {'ABORT_DETACHED_QUERY': False, 'AUTOCOMMIT': True, 'CLIENT_SESSION_KEEP_ALIVE': False, 'CLIENT_PREFETCH_THREADS': 4}}
+2024-05-27 17:36:11,224 (33187/MainThread) snowflake.connector.vendored.urllib3.util.retry DEBUG          retry:351  - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-05-27 17:36:11,224 (33187/MainThread) snowflake.connector.vendored.urllib3.util.retry DEBUG          retry:351  - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-05-27 17:36:11,224 (33187/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-05-27 17:36:11,225 (33187/MainThread) snowflake.connector.network DEBUG        network:875  - remaining request timeout: N/A ms, retry cnt: 1
+2024-05-27 17:36:11,225 (33187/MainThread) snowflake.connector.network DEBUG        network:857  - Request guid: e0dad619-6530-4eab-b51f-b3800e83ea4c
+2024-05-27 17:36:11,225 (33187/MainThread) snowflake.connector.network DEBUG        network:1065 - socket timeout: 60
+2024-05-27 17:36:11,294 (33187/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:1019 - Starting new HTTPS connection (1): sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443
+2024-05-27 17:36:12,025 (33187/MainThread) snowflake.connector.ssl_wrap_socket DEBUG ssl_wrap_socket:79   - OCSP Mode: FAIL_OPEN, OCSP response cache file name: None
+2024-05-27 17:36:12,049 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:492  - cache directory: /Users/mkobel/Library/Caches/Snowflake
+2024-05-27 17:36:12,051 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:530  - ocsp_response_cache_uri: file:///Users/mkobel/Library/Caches/Snowflake/ocsp_response_cache.json
+2024-05-27 17:36:12,052 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:533  - OCSP_VALIDATION_CACHE size: 294
+2024-05-27 17:36:12,052 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:332  - OCSP response cache server is enabled: http://ocsp.snowflakecomputing.com/ocsp_response_cache.json
+2024-05-27 17:36:12,052 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:345  - OCSP dynamic cache server RETRY URL: None
+2024-05-27 17:36:12,052 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:966  - validating certificate: sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com
+2024-05-27 17:36:12,053 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:385  - # of certificates: 4
+2024-05-27 17:36:12,054 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('common_name', '*.prod3.us-west-2.snowflakecomputing.com')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M02')])
+2024-05-27 17:36:12,055 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M02')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')])
+2024-05-27 17:36:12,055 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')]), issuer: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')])
+2024-05-27 17:36:12,056 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Starfield Technologies, Inc.'), ('organizational_unit_name', 'Starfield Class 2 Certification Authority')])
+2024-05-27 17:36:12,059 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:87   - reading certificate bundle: /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/_MEIaLFyVS/certifi/cacert.pem
+2024-05-27 17:36:12,073 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:413  - not found issuer_der: OrderedDict([('country_name', 'US'), ('organization_name', 'Starfield Technologies, Inc.'), ('organizational_unit_name', 'Starfield Class 2 Certification Authority')])
+2024-05-27 17:36:12,075 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('common_name', '*.prod3.us-west-2.snowflakecomputing.com')])
+2024-05-27 17:36:12,077 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-12-10 00:00:00+00:00
+2024-05-27 17:36:12,077 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M02')])
+2024-05-27 17:36:12,079 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-12-10 00:00:00+00:00
+2024-05-27 17:36:12,079 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')])
+2024-05-27 17:36:12,081 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-05-07 12:00:00+00:00
+2024-05-27 17:36:12,081 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')])
+2024-05-27 17:36:12,083 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:1023 - ok
+2024-05-27 17:36:12,432 (33187/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443 "POST /session/v1/login-request?request_id=02318e35-d8b2-4b25-b31b-858bd05a3e99&databaseName=TECHUP_DEMO_DB&schemaName=data_schema&warehouse=TECHUP_DEMO_WH&roleName=TECHUP_DEMO_ROLE&request_guid=e0dad619-6530-4eab-b51f-b3800e83ea4c HTTP/1.1" 200 1486
+2024-05-27 17:36:12,437 (33187/MainThread) snowflake.connector.network DEBUG        network:1092 - SUCCESS
+2024-05-27 17:36:12,437 (33187/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-05-27 17:36:12,438 (33187/MainThread) snowflake.connector.network DEBUG        network:745  - ret[code] = None, after post request
+2024-05-27 17:36:12,438 (33187/MainThread) snowflake.connector.auth._auth DEBUG          _auth:371  - completed authentication
+2024-05-27 17:36:12,438 (33187/MainThread) snowflake.connector.auth._auth DEBUG          _auth:418  - token = ******
+2024-05-27 17:36:12,439 (33187/MainThread) snowflake.connector.auth._auth DEBUG          _auth:424  - master_token = ******
+2024-05-27 17:36:12,439 (33187/MainThread) snowflake.connector.auth._auth DEBUG          _auth:430  - id_token = NULL
+2024-05-27 17:36:12,439 (33187/MainThread) snowflake.connector.auth._auth DEBUG          _auth:436  - mfa_token = NULL
+2024-05-27 17:36:12,442 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:325  - adding connection: 0
+2024-05-27 17:36:12,442 (33187/MainThread) __main__ DEBUG      eventloop:719  - Read from query argument
+2024-05-27 17:36:12,443 (33187/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:292  - sqlsplit: construct SQLDelimiter ;
+2024-05-27 17:36:12,444 (33187/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:293  - use old split_statements that supports delimiter.
+2024-05-27 17:36:12,445 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:416  - secret_free_sql: put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=false overwrite=true;
+2024-05-27 17:36:12,445 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:423  - set()
+2024-05-27 17:36:12,445 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:343  - joining async exec
+2024-05-27 17:36:12,445 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:351  - waiting for async exec to finish...
+2024-05-27 17:36:12,446 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:368  - all async queries finished.
+2024-05-27 17:36:12,446 (33187/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:292  - sqlsplit: construct SQLDelimiter ;
+2024-05-27 17:36:12,446 (33187/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:293  - use old split_statements that supports delimiter.
+2024-05-27 17:36:12,446 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:566  - Regular sql statement. sql: put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=false overwrite=true;
+2024-05-27 17:36:12,447 (33187/MainThread) snowflake.connector.connection DEBUG     connection:806  - cursor
+2024-05-27 17:36:12,447 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:571  - exit_on_error: False, progress_bar: True
+2024-05-27 17:36:12,447 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:903  - executing SQL/command
+2024-05-27 17:36:12,447 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:759  - binding: [put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=...] with input=[None], processed=[{}]
+2024-05-27 17:36:12,448 (33187/MainThread) snowflake.connector.cursor INFO         cursor:971  - query: [put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=...]
+2024-05-27 17:36:12,448 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:614  - Cannot use arrow result format, fallback to json format
+2024-05-27 17:36:12,448 (33187/MainThread) snowflake.connector.connection DEBUG     connection:1582 - sequence counter: 1
+2024-05-27 17:36:12,448 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:633  - Request id: e7eaf4c6-8c23-44a9-a83b-882aa168ee03
+2024-05-27 17:36:12,449 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:635  - running query [put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=...]
+2024-05-27 17:36:12,449 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:642  - is_file_transfer: True
+2024-05-27 17:36:12,449 (33187/MainThread) snowflake.connector.connection DEBUG     connection:1245 - _cmd_query
+2024-05-27 17:36:12,449 (33187/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:155  - serialize_to_dict() called
+2024-05-27 17:36:12,450 (33187/MainThread) snowflake.connector.connection DEBUG     connection:1272 - sql=[put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=...], sequence_id=[1], is_file_transfer=[True]
+2024-05-27 17:36:12,450 (33187/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-05-27 17:36:12,450 (33187/MainThread) snowflake.connector.network DEBUG        network:875  - remaining request timeout: N/A ms, retry cnt: 1
+2024-05-27 17:36:12,451 (33187/MainThread) snowflake.connector.network DEBUG        network:857  - Request guid: c2c1f834-8e4d-418f-a8d1-becd0d92182b
+2024-05-27 17:36:12,451 (33187/MainThread) snowflake.connector.network DEBUG        network:1065 - socket timeout: 60
+2024-05-27 17:36:12,754 (33187/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=e7eaf4c6-8c23-44a9-a83b-882aa168ee03&request_guid=c2c1f834-8e4d-418f-a8d1-becd0d92182b HTTP/1.1" 200 1453
+2024-05-27 17:36:12,758 (33187/MainThread) snowflake.connector.network DEBUG        network:1092 - SUCCESS
+2024-05-27 17:36:12,758 (33187/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-05-27 17:36:12,759 (33187/MainThread) snowflake.connector.network DEBUG        network:745  - ret[code] = None, after post request
+2024-05-27 17:36:12,759 (33187/MainThread) snowflake.connector.network DEBUG        network:771  - Query id: 01b49ce0-0002-7536-0038-5287006b11ee
+2024-05-27 17:36:12,759 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:978  - sfqid: 01b49ce0-0002-7536-0038-5287006b11ee
+2024-05-27 17:36:12,760 (33187/MainThread) snowflake.connector.cursor INFO         cursor:984  - query execution done
+2024-05-27 17:36:12,760 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:998  - SUCCESS
+2024-05-27 17:36:12,760 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:1017 - PUT OR GET: True
+2024-05-27 17:36:12,761 (33187/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:851  - UPLOAD
+2024-05-27 17:36:12,762 (33187/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:977  - command type: UPLOAD
+2024-05-27 17:36:12,772 (33187/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:1142 - no file encoding was detected: file=/Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:36:12,776 (33187/MainThread) snowflake.connector.vendored.urllib3.util.retry DEBUG          retry:351  - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-05-27 17:36:12,777 (33187/MainThread) snowflake.connector.vendored.urllib3.util.retry DEBUG          retry:351  - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-05-27 17:36:12,777 (33187/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 1/1 active sessions
+2024-05-27 17:36:12,777 (33187/MainThread) snowflake.connector.storage_client DEBUG storage_client:286  - storage client request with session <snowflake.connector.vendored.requests.sessions.Session object at 0x10fa91730>
+2024-05-27 17:36:12,843 (33187/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:1019 - Starting new HTTPS connection (1): sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com:443
+2024-05-27 17:36:13,352 (33187/MainThread) snowflake.connector.ssl_wrap_socket DEBUG ssl_wrap_socket:79   - OCSP Mode: FAIL_OPEN, OCSP response cache file name: None
+2024-05-27 17:36:13,353 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:530  - ocsp_response_cache_uri: file:///Users/mkobel/Library/Caches/Snowflake/ocsp_response_cache.json
+2024-05-27 17:36:13,354 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:533  - OCSP_VALIDATION_CACHE size: 294
+2024-05-27 17:36:13,356 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:332  - OCSP response cache server is enabled: http://ocsp.snowflakecomputing.com/ocsp_response_cache.json
+2024-05-27 17:36:13,357 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:345  - OCSP dynamic cache server RETRY URL: None
+2024-05-27 17:36:13,357 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:966  - validating certificate: sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com
+2024-05-27 17:36:13,359 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:385  - # of certificates: 4
+2024-05-27 17:36:13,362 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('common_name', '*.s3.amazonaws.com')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M01')])
+2024-05-27 17:36:13,363 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M01')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')])
+2024-05-27 17:36:13,364 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')]), issuer: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')])
+2024-05-27 17:36:13,365 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Starfield Technologies, Inc.'), ('organizational_unit_name', 'Starfield Class 2 Certification Authority')])
+2024-05-27 17:36:13,368 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:413  - not found issuer_der: OrderedDict([('country_name', 'US'), ('organization_name', 'Starfield Technologies, Inc.'), ('organizational_unit_name', 'Starfield Class 2 Certification Authority')])
+2024-05-27 17:36:13,370 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('common_name', '*.s3.amazonaws.com')])
+2024-05-27 17:36:13,372 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-12-10 00:00:00+00:00
+2024-05-27 17:36:13,373 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M01')])
+2024-05-27 17:36:13,375 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-12-10 00:00:00+00:00
+2024-05-27 17:36:13,376 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')])
+2024-05-27 17:36:13,378 (33187/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-05-07 12:00:00+00:00
+2024-05-27 17:36:13,378 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')])
+2024-05-27 17:36:13,381 (33187/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:1023 - ok
+2024-05-27 17:36:13,633 (33187/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com:443 "GET /?accelerate HTTP/1.1" 403 None
+2024-05-27 17:36:13,634 (33187/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 0/1 active sessions
+2024-05-27 17:36:13,634 (33187/MainThread) snowflake.connector.storage_client DEBUG storage_client:449  - cleaning up tmp dir: /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmp4irrwko1
+2024-05-27 17:36:13,635 (33187/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:424  - parallel=[4]
+2024-05-27 17:36:13,635 (33187/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:447  - Chunk ThreadPoolExecutor size: 4
+2024-05-27 17:36:13,637 (33187/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:187  - Preprocessing /Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:36:13,638 (33187/ThreadPoolExecutor-1_0) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 1/1 active sessions
+2024-05-27 17:36:13,638 (33187/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:286  - storage client request with session <snowflake.connector.vendored.requests.sessions.Session object at 0x10fa91730>
+2024-05-27 17:36:13,884 (33187/ThreadPoolExecutor-1_0) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com:443 "HEAD /3jwb0000-s/stages/c7540ae4-518a-4576-81cb-504c6d8c208f/techup_template_git_job.yaml HTTP/1.1" 404 0
+2024-05-27 17:36:13,887 (33187/ThreadPoolExecutor-1_0) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 0/1 active sessions
+2024-05-27 17:36:13,887 (33187/ThreadPoolExecutor-1_0) snowflake.connector.s3_storage_client DEBUG s3_storage_client:402  - not found. bucket: sfc-prod3-ds1-18-customer-stage, path: 3jwb0000-s/stages/c7540ae4-518a-4576-81cb-504c6d8c208f/techup_template_git_job.yaml
+2024-05-27 17:36:13,888 (33187/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:134  - getting digest file=/Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:36:13,889 (33187/ThreadPoolExecutor-1_0) snowflake.connector.file_util DEBUG      file_util:150  - getting digest and size: 23AaIn+R7uDDVo3gRN+01b5rjBqhFkNgq/ewbM6f83w=, 518, file=/Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:36:13,890 (33187/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:228  - Preparing to upload /Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:36:13,890 (33187/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:150  - encrypting file=/Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:36:13,891 (33187/ThreadPoolExecutor-1_0) snowflake.connector.encryption_util DEBUG encryption_util:138  - unencrypted file: /Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml, temp file: /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpk0h1ck83/techup_template_git_job.yaml#a0xcfxkp, tmp_dir: /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpk0h1ck83
+2024-05-27 17:36:13,892 (33187/ThreadPoolExecutor-1_0) snowflake.connector.encryption_util DEBUG encryption_util:75   - key_size = 16
+2024-05-27 17:36:13,894 (33187/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:234  - finished preprocessing
+2024-05-27 17:36:13,894 (33187/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:239  - number of chunks 1
+2024-05-27 17:36:13,895 (33187/ThreadPoolExecutor-1_0) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:482  - Finished preparing file techup_template_git_job.yaml
+2024-05-27 17:36:13,896 (33187/ThreadPoolExecutor-0_0) snowflake.connector.storage_client DEBUG storage_client:413  - Uploading chunk 0 of file /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpk0h1ck83/techup_template_git_job.yaml#a0xcfxkp
+2024-05-27 17:36:13,896 (33187/ThreadPoolExecutor-0_0) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 1/1 active sessions
+2024-05-27 17:36:13,897 (33187/ThreadPoolExecutor-0_0) snowflake.connector.storage_client DEBUG storage_client:286  - storage client request with session <snowflake.connector.vendored.requests.sessions.Session object at 0x10fa91730>
+2024-05-27 17:36:14,239 (33187/ThreadPoolExecutor-0_0) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com:443 "PUT /3jwb0000-s/stages/c7540ae4-518a-4576-81cb-504c6d8c208f/techup_template_git_job.yaml HTTP/1.1" 200 0
+2024-05-27 17:36:14,242 (33187/ThreadPoolExecutor-0_0) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 0/1 active sessions
+2024-05-27 17:36:14,242 (33187/ThreadPoolExecutor-0_0) snowflake.connector.storage_client DEBUG storage_client:415  - Successfully uploaded chunk 0 of file /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpk0h1ck83/techup_template_git_job.yaml#a0xcfxkp
+2024-05-27 17:36:14,243 (33187/ThreadPoolExecutor-0_0) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:528  - Chunk 0/1 of file techup_template_git_job.yaml reached callback
+2024-05-27 17:36:14,243 (33187/ThreadPoolExecutor-0_0) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:544  - Chunk progress: techup_template_git_job.yaml: completed: 1 failed: 0 total: 1
+2024-05-27 17:36:14,244 (33187/ThreadPoolExecutor-0_0) snowflake.connector.storage_client DEBUG storage_client:255  - /Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml upload is completed.
+2024-05-27 17:36:14,244 (33187/ThreadPoolExecutor-0_0) snowflake.connector.storage_client DEBUG storage_client:449  - cleaning up tmp dir: /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpk0h1ck83
+2024-05-27 17:36:14,247 (33187/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:734  - raise_put_get_error: False, UPLOADED, <class 'str'>, ResultStatus.ERROR, <enum 'ResultStatus'>
+2024-05-27 17:36:14,248 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:1130 - Query result format: json
+2024-05-27 17:36:14,248 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:36:14,248 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:36:14,249 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: FIXED, Format: None
+2024-05-27 17:36:14,249 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: FIXED, Format: None
+2024-05-27 17:36:14,249 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:36:14,250 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:36:14,250 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:36:14,250 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:36:14,251 (33187/MainThread) snowflake.connector.result_batch DEBUG   result_batch:487  - parsing for result batch id: 1
+2024-05-27 17:36:14,251 (33187/MainThread) snowflake.connector.result_set DEBUG     result_set:68   - beginning to schedule result batch downloads
+2024-05-27 17:36:14,252 (33187/MainThread) __main__ DEBUG      eventloop:770  - headers: [('source', 2), ('target', 2), ('source_size', 0), ('target_size', 0), ('source_compression', 2), ('target_compression', 2), ('status', 2), ('message', 2)]
+2024-05-27 17:36:14,253 (33187/MainThread) __main__ DEBUG      eventloop:772  - rows: "[['techup_template_git_job.yaml', 'techup_template_git_job.yaml', '518', '528', 'NONE', 'NONE', 'UPLOADED', '']]"
+2024-05-27 17:36:14,253 (33187/MainThread) snowflake.cli.tabulate DEBUG       tabulate:645  - minwidths: [28, 28, 11, 11, 18, 18, 8, 7]
+2024-05-27 17:36:14,253 (33187/MainThread) snowflake.cli.tabulate DEBUG       tabulate:654  - headers: ['source                      ', 'target                      ', 'source_size', 'target_size', 'source_compression', 'target_compression', 'status  ', 'message'], minwidths: [28, 28, 11, 11, 18, 18, 8, 7]
+2024-05-27 17:36:14,254 (33187/MainThread) __main__ DEBUG      eventloop:869  - Command Time: 1.811128854751587
+2024-05-27 17:36:14,256 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:416  - secret_free_sql: list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;
+2024-05-27 17:36:14,256 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:423  - {('__rowcount', '...'), ('__sfqid', '...')}
+2024-05-27 17:36:14,256 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:343  - joining async exec
+2024-05-27 17:36:14,256 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:351  - waiting for async exec to finish...
+2024-05-27 17:36:14,257 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:368  - all async queries finished.
+2024-05-27 17:36:14,257 (33187/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:292  - sqlsplit: construct SQLDelimiter ;
+2024-05-27 17:36:14,257 (33187/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:293  - use old split_statements that supports delimiter.
+2024-05-27 17:36:14,258 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:566  - Regular sql statement. sql: list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;
+2024-05-27 17:36:14,258 (33187/MainThread) snowflake.connector.connection DEBUG     connection:806  - cursor
+2024-05-27 17:36:14,258 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:571  - exit_on_error: False, progress_bar: True
+2024-05-27 17:36:14,258 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:903  - executing SQL/command
+2024-05-27 17:36:14,259 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:759  - binding: [list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;] with input=[None], processed=[{}]
+2024-05-27 17:36:14,259 (33187/MainThread) snowflake.connector.cursor INFO         cursor:971  - query: [list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;]
+2024-05-27 17:36:14,259 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:614  - Cannot use arrow result format, fallback to json format
+2024-05-27 17:36:14,259 (33187/MainThread) snowflake.connector.connection DEBUG     connection:1582 - sequence counter: 2
+2024-05-27 17:36:14,260 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:633  - Request id: c00b44f4-d9d7-48c6-b9b3-b72d60d0c5db
+2024-05-27 17:36:14,260 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:635  - running query [list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;]
+2024-05-27 17:36:14,260 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:642  - is_file_transfer: True
+2024-05-27 17:36:14,260 (33187/MainThread) snowflake.connector.connection DEBUG     connection:1245 - _cmd_query
+2024-05-27 17:36:14,261 (33187/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:155  - serialize_to_dict() called
+2024-05-27 17:36:14,261 (33187/MainThread) snowflake.connector.connection DEBUG     connection:1272 - sql=[list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;], sequence_id=[2], is_file_transfer=[False]
+2024-05-27 17:36:14,261 (33187/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-05-27 17:36:14,261 (33187/MainThread) snowflake.connector.network DEBUG        network:875  - remaining request timeout: N/A ms, retry cnt: 1
+2024-05-27 17:36:14,262 (33187/MainThread) snowflake.connector.network DEBUG        network:857  - Request guid: 923f2a82-e3fb-49c4-9bbc-537db88864f8
+2024-05-27 17:36:14,262 (33187/MainThread) snowflake.connector.network DEBUG        network:1065 - socket timeout: 60
+2024-05-27 17:36:14,574 (33187/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=c00b44f4-d9d7-48c6-b9b3-b72d60d0c5db&request_guid=923f2a82-e3fb-49c4-9bbc-537db88864f8 HTTP/1.1" 200 1351
+2024-05-27 17:36:14,578 (33187/MainThread) snowflake.connector.network DEBUG        network:1092 - SUCCESS
+2024-05-27 17:36:14,578 (33187/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-05-27 17:36:14,579 (33187/MainThread) snowflake.connector.network DEBUG        network:745  - ret[code] = None, after post request
+2024-05-27 17:36:14,579 (33187/MainThread) snowflake.connector.network DEBUG        network:771  - Query id: 01b49ce0-0002-7539-0038-5287006b70a2
+2024-05-27 17:36:14,580 (33187/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:189  - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1716831374562524, 'priority': 0}]}
+2024-05-27 17:36:14,580 (33187/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:230  - deserialize {'id': 0, 'timestamp': 1716831374562524, 'priority': 0}
+2024-05-27 17:36:14,581 (33187/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:101  - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-05-27 17:36:14,581 (33187/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:127  - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-05-27 17:36:14,581 (33187/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:136  - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-05-27 17:36:14,581 (33187/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:269  - deserialize_json_dict() returns
+2024-05-27 17:36:14,582 (33187/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:274  - Cache Entry: (0, 1716831374562524, 0)
+2024-05-27 17:36:14,582 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:978  - sfqid: 01b49ce0-0002-7539-0038-5287006b70a2
+2024-05-27 17:36:14,583 (33187/MainThread) snowflake.connector.cursor INFO         cursor:984  - query execution done
+2024-05-27 17:36:14,583 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:998  - SUCCESS
+2024-05-27 17:36:14,584 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:1017 - PUT OR GET: False
+2024-05-27 17:36:14,584 (33187/MainThread) snowflake.connector.cursor DEBUG         cursor:1130 - Query result format: json
+2024-05-27 17:36:14,584 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:36:14,585 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: FIXED, Format: None
+2024-05-27 17:36:14,585 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:36:14,585 (33187/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:36:14,586 (33187/MainThread) snowflake.connector.result_batch DEBUG   result_batch:487  - parsing for result batch id: 3
+2024-05-27 17:36:14,586 (33187/MainThread) snowflake.connector.cursor INFO         cursor:1144 - Number of results in first chunk: 3
+2024-05-27 17:36:14,587 (33187/MainThread) snowflake.connector.result_set DEBUG     result_set:68   - beginning to schedule result batch downloads
+2024-05-27 17:36:14,587 (33187/MainThread) __main__ DEBUG      eventloop:770  - headers: [('name', 2), ('size', 0), ('md5', 2), ('last_modified', 2)]
+2024-05-27 17:36:14,587 (33187/MainThread) __main__ DEBUG      eventloop:772  - rows: "[['techup_demo_stage/techup_git_job.yaml', '528', 'c107e1aaa546b033aac8899b3fc4a697', 'Mon, 27 May 2024 12:24:51 GMT'], ['techup_demo_stage/techup_job.yaml', '272', 'fb3036472df07074ca7610fbc5bda524', 'Mon, 27 May 2024 12:20:25 GMT'], ['techup_demo_sta..."
+2024-05-27 17:36:14,588 (33187/MainThread) snowflake.cli.tabulate DEBUG       tabulate:645  - minwidths: [46, 4, 32, 29]
+2024-05-27 17:36:14,588 (33187/MainThread) snowflake.cli.tabulate DEBUG       tabulate:654  - headers: ['name                                          ', 'size', 'md5                             ', 'last_modified                '], minwidths: [46, 4, 32, 29]
+2024-05-27 17:36:14,589 (33187/MainThread) __main__ DEBUG      eventloop:869  - Command Time: 0.3336968421936035
+2024-05-27 17:36:14,589 (33187/MainThread) __main__ DEBUG      eventloop:841  - end of SQL: list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;
+2024-05-27 17:36:14,590 (33187/MainThread) __main__ DEBUG      eventloop:628  - closing sessions
+2024-05-27 17:36:14,590 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:376  - closing connections
+2024-05-27 17:36:14,590 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:343  - joining async exec
+2024-05-27 17:36:14,590 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:351  - waiting for async exec to finish...
+2024-05-27 17:36:14,591 (33187/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:368  - all async queries finished.
+2024-05-27 17:36:14,591 (33187/MainThread) snowflake.connector.connection INFO     connection:734  - closed
+2024-05-27 17:36:14,591 (33187/MainThread) snowflake.connector.telemetry DEBUG      telemetry:211  - Closing telemetry client.
+2024-05-27 17:36:14,592 (33187/MainThread) snowflake.connector.telemetry DEBUG      telemetry:176  - Sending 1 logs to telemetry. Data is {'logs': [{'message': {'driver_type': 'PythonConnector', 'driver_version': '3.7.1', 'source': 'SnowSQL', 'type': 'client_imported_packages', 'value': "{'struct', 'email', 'fcntl', 'stat', 'zipfile', 'pathlib', 'pickle', 'os', 'sys', 'quopri', 'fractions', 'collections', 'zipimport', 'selectors', 'textwrap', 'pygments', 'mimetypes', 'token', 'sqlparse', 'six', 'hashlib', 'weakref', 'csv', 'calendar', 'ssl', 'urllib3', 'snowflake', 'gzip', 'multiprocessing', 'dis', 'cryptography', 'filelock', 'wcwidth', 'jwt', 'ipaddress', 'webbrowser', 'secrets', 'platform', 'io', 'pyimod01_os_path', 'copyreg', 'xml', 'time', 'jaraco', 'lzma', 'codecs', 'functools', 'math', 'pyimod04_ctypes', 'hmac', 'requests', 'importlib', 'bisect', 'abc', 'posixpath', 'bz2', 'plistlib', 'numbers', 'queue', 'pytz', 'argparse', 'pwd', 'binascii', 'ctypes', 'configparser', 'builtins', 'asn1crypto', 'dataclasses', 'fnmatch', 'inspect', 'marshal', 'linecache', 'concurrent', 'keyring', 'packaging', 'getpass', 'random', 'sre_parse', 'importlib_metadata', 'sysconfig', 'threading', 'json', 'typing_extensions', 'certifi', 'pyexpat', 'click', 'traceback', 'typing', 'tty', 'types', 'shlex', 'stringprep', 'pkg_resources', 'ast', 'runpy', 'termios', 'posix', 'grp', 'sre_constants', 'pyimod03_importers', 'sre_compile', 'glob', 'logging', 'enum', 'signal', 'charset_normalizer', 'atexit', 'copy', 'socket', 'prompt_toolkit', 'opcode', 'base64', 'itertools', 'difflib', 'encodings', 'uuid', 'configobj', 'zlib', 'string', 'colorama', 'OpenSSL', 'unicodedata', 'operator', 'keyword', 'datetime', 'idna', 'warnings', 'contextlib', 'uu', 'genericpath', 'zipp', 'http', 'keyrings', 'reprlib', 'tomlkit', 'pyimod02_archive', 'shutil', 'tempfile', 'sortedcontainers', 'html', 'platformdirs', 're', 'heapq', 'subprocess', 'pkgutil', 'errno', 'urllib', 'tokenize', 'ntpath', 'locale', 'gettext', 'array', 'decimal', 'select'}"}, 'timestamp': '1716831372440'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.7.1', 'source': 'SnowSQL', 'type': 'client_time_consume_last_result', 'query_id': '01b49ce0-0002-7536-0038-5287006b11ee', 'value': 1491}, 'timestamp': '1716831374251'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.7.1', 'source': 'SnowSQL', 'type': 'client_time_consume_first_result', 'query_id': '01b49ce0-0002-7539-0038-5287006b70a2', 'value': 1}, 'timestamp': '1716831374583'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.7.1', 'source': 'SnowSQL', 'type': 'client_time_consume_last_result', 'query_id': '01b49ce0-0002-7539-0038-5287006b70a2', 'value': 4}, 'timestamp': '1716831374587'}]}.
+2024-05-27 17:36:14,595 (33187/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-05-27 17:36:14,595 (33187/MainThread) snowflake.connector.network DEBUG        network:875  - remaining request timeout: 5000 ms, retry cnt: 1
+2024-05-27 17:36:14,596 (33187/MainThread) snowflake.connector.network DEBUG        network:857  - Request guid: 5531471b-c45b-41da-a4a3-6418b05bd97c
+2024-05-27 17:36:14,596 (33187/MainThread) snowflake.connector.network DEBUG        network:1065 - socket timeout: 60
+2024-05-27 17:36:14,827 (33187/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443 "POST /telemetry/send?request_guid=5531471b-c45b-41da-a4a3-6418b05bd97c HTTP/1.1" 200 86
+2024-05-27 17:36:14,830 (33187/MainThread) snowflake.connector.network DEBUG        network:1092 - SUCCESS
+2024-05-27 17:36:14,831 (33187/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-05-27 17:36:14,831 (33187/MainThread) snowflake.connector.network DEBUG        network:745  - ret[code] = None, after post request
+2024-05-27 17:36:14,831 (33187/MainThread) snowflake.connector.telemetry DEBUG      telemetry:200  - Successfully uploading metrics to telemetry.
+2024-05-27 17:36:14,832 (33187/MainThread) snowflake.connector.connection INFO     connection:740  - No async queries seem to be running, deleting session
+2024-05-27 17:36:14,832 (33187/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-05-27 17:36:14,833 (33187/MainThread) snowflake.connector.network DEBUG        network:875  - remaining request timeout: 5000 ms, retry cnt: 1
+2024-05-27 17:36:14,833 (33187/MainThread) snowflake.connector.network DEBUG        network:857  - Request guid: b29f8f6f-cd02-47b2-8fd4-cca6d8e57f24
+2024-05-27 17:36:14,834 (33187/MainThread) snowflake.connector.network DEBUG        network:1065 - socket timeout: 60
+2024-05-27 17:36:15,084 (33187/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443 "POST /session?delete=true&request_guid=b29f8f6f-cd02-47b2-8fd4-cca6d8e57f24 HTTP/1.1" 200 76
+2024-05-27 17:36:15,087 (33187/MainThread) snowflake.connector.network DEBUG        network:1092 - SUCCESS
+2024-05-27 17:36:15,087 (33187/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-05-27 17:36:15,088 (33187/MainThread) snowflake.connector.network DEBUG        network:745  - ret[code] = None, after post request
+2024-05-27 17:36:15,093 (33187/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:141  - clear_cache() called
+2024-05-27 17:36:15,094 (33187/MainThread) snowflake.connector.connection DEBUG     connection:753  - Session is closed
+2024-05-27 17:37:27,759 (33651/MainThread) snowflake.cli.common.util_cli DEBUG       util_cli:732  - Initialized logging. Log file './snowsql_rt.log', Namespaces: ['snowflake.cli', 'snowflake.connector', 'botocore', 'azure', '__main__', 'eventloop', 'sqlexecute']
+2024-05-27 17:37:27,760 (33651/MainThread) snowflake.cli.common.util_cli INFO       util_cli:767  - REQUESTS_CA_BUNDLE is already set to /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/_MEIBsAm8P/certifi/cacert.pem
+2024-05-27 17:37:27,761 (33651/MainThread) __main__ DEBUG      eventloop:256  - is_terminal: True, is_interactive: True
+2024-05-27 17:37:27,761 (33651/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /Users/mkobel/.snowsql/1.2.32/snowsql.cnf
+2024-05-27 17:37:27,762 (33651/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /etc/snowsql.cnf
+2024-05-27 17:37:27,762 (33651/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /etc/snowflake/snowsql.cnf
+2024-05-27 17:37:27,762 (33651/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /usr/local/etc/snowsql.cnf
+2024-05-27 17:37:27,762 (33651/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /Users/mkobel/.snowsql.cnf
+2024-05-27 17:37:27,762 (33651/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /Users/mkobel/.snowsql/config
+2024-05-27 17:37:27,763 (33651/MainThread) snowflake.cli.common.config DEBUG         config:87   - Reading cnf: /Users/mkobel/.snowsql/spcs-account-config
+2024-05-27 17:37:27,763 (33651/MainThread) __main__ DEBUG      eventloop:399  - [None, 'TECHUP_DEMO_DB', None, 'TECHUP_DEMO_WH', None, 'MENY', None, 'SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO', None, None, None, None, 'data_schema', None, 'TECHUP_DEMO_ROLE', None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2024-05-27 17:37:27,763 (33651/MainThread) __main__ DEBUG      eventloop:405  - fallback to config values only if user did not specify a value and sqlexecute is connecting for the first time.
+2024-05-27 17:37:27,763 (33651/MainThread) __main__ DEBUG      eventloop:454  - host=None, port: + None
+2024-05-27 17:37:27,763 (33651/MainThread) __main__ DEBUG      eventloop:493  - prompting user, password and account if still missing
+2024-05-27 17:37:27,764 (33651/MainThread) __main__ DEBUG      eventloop:548  - init sqlexecute
+2024-05-27 17:37:27,764 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:246  - Connection DB Params: database: TECHUP_DEMO_DB, warehouse: TECHUP_DEMO_WH, user: MENY, host: SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO.snowflakecomputing.com, port: 443, region: None, account: SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO, protocol: https, schema: data_schema, role: TECHUP_DEMO_ROLE, ocsp_fail_open: True, insecure_mode: None, proxy_host: None, proxy_port: None, proxy_user: None, authenticator: SNOWFLAKE, session_parameters: {'ABORT_DETACHED_QUERY': False}, login_timeout: 120, client_session_keep_alive: False, disable_request_pooling: None, client_store_temporary_credential: None
+2024-05-27 17:37:27,764 (33651/MainThread) snowflake.connector.connection INFO     connection:386  - Snowflake Connector for Python Version: 3.7.1, Python Version: 3.8.18, Platform: macOS-14.5-x86_64-i386-64bit
+2024-05-27 17:37:27,764 (33651/MainThread) snowflake.connector.connection DEBUG     connection:681  - connect
+2024-05-27 17:37:27,764 (33651/MainThread) snowflake.connector.connection DEBUG     connection:1060 - __config
+2024-05-27 17:37:27,765 (33651/MainThread) snowflake.connector.connection INFO     connection:1211 - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-05-27 17:37:27,765 (33651/MainThread) snowflake.connector.converter DEBUG      converter:159  - use_numpy: False
+2024-05-27 17:37:27,765 (33651/MainThread) snowflake.connector.connection DEBUG     connection:887  - REST API object was created: SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO.snowflakecomputing.com:443
+2024-05-27 17:37:27,765 (33651/MainThread) snowflake.connector.auth._auth DEBUG          _auth:174  - authenticate
+2024-05-27 17:37:27,765 (33651/MainThread) snowflake.connector.auth._auth DEBUG          _auth:208  - assertion content: *********
+2024-05-27 17:37:27,765 (33651/MainThread) snowflake.connector.auth._auth DEBUG          _auth:211  - account=SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO, user=MENY, database=TECHUP_DEMO_DB, schema=data_schema, warehouse=TECHUP_DEMO_WH, role=TECHUP_DEMO_ROLE, request_id=b8e64ceb-f8ad-4288-aac2-2db46357d6e9
+2024-05-27 17:37:27,766 (33651/MainThread) snowflake.connector.auth._auth DEBUG          _auth:244  - body['data']: {'CLIENT_APP_ID': 'SnowSQL', 'CLIENT_APP_VERSION': '1.2.32', 'SVN_REVISION': None, 'ACCOUNT_NAME': 'SFSEEUROPE-AWS_US_WEST_2_SNOWFLAKE_DEMO', 'LOGIN_NAME': 'MENY', 'CLIENT_ENVIRONMENT': {'APPLICATION': 'SnowSQL', 'OS': 'Darwin', 'OS_VERSION': 'macOS-14.5-x86_64-i386-64bit', 'PYTHON_VERSION': '3.8.18', 'PYTHON_RUNTIME': 'CPython', 'PYTHON_COMPILER': 'Clang 13.0.0 (clang-1300.0.29.30)', 'OCSP_MODE': 'FAIL_OPEN', 'TRACING': 10, 'LOGIN_TIMEOUT': 120, 'NETWORK_TIMEOUT': None, 'SOCKET_TIMEOUT': None}, 'SESSION_PARAMETERS': {'ABORT_DETACHED_QUERY': False, 'AUTOCOMMIT': True, 'CLIENT_SESSION_KEEP_ALIVE': False, 'CLIENT_PREFETCH_THREADS': 4}}
+2024-05-27 17:37:27,766 (33651/MainThread) snowflake.connector.vendored.urllib3.util.retry DEBUG          retry:351  - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-05-27 17:37:27,766 (33651/MainThread) snowflake.connector.vendored.urllib3.util.retry DEBUG          retry:351  - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-05-27 17:37:27,767 (33651/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-05-27 17:37:27,767 (33651/MainThread) snowflake.connector.network DEBUG        network:875  - remaining request timeout: N/A ms, retry cnt: 1
+2024-05-27 17:37:27,767 (33651/MainThread) snowflake.connector.network DEBUG        network:857  - Request guid: d3201451-9e2e-4be1-83cf-37bd01d3293d
+2024-05-27 17:37:27,767 (33651/MainThread) snowflake.connector.network DEBUG        network:1065 - socket timeout: 60
+2024-05-27 17:37:27,837 (33651/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:1019 - Starting new HTTPS connection (1): sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443
+2024-05-27 17:37:28,587 (33651/MainThread) snowflake.connector.ssl_wrap_socket DEBUG ssl_wrap_socket:79   - OCSP Mode: FAIL_OPEN, OCSP response cache file name: None
+2024-05-27 17:37:28,612 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:492  - cache directory: /Users/mkobel/Library/Caches/Snowflake
+2024-05-27 17:37:28,613 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:530  - ocsp_response_cache_uri: file:///Users/mkobel/Library/Caches/Snowflake/ocsp_response_cache.json
+2024-05-27 17:37:28,614 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:533  - OCSP_VALIDATION_CACHE size: 294
+2024-05-27 17:37:28,614 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:332  - OCSP response cache server is enabled: http://ocsp.snowflakecomputing.com/ocsp_response_cache.json
+2024-05-27 17:37:28,614 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:345  - OCSP dynamic cache server RETRY URL: None
+2024-05-27 17:37:28,614 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:966  - validating certificate: sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com
+2024-05-27 17:37:28,615 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:385  - # of certificates: 4
+2024-05-27 17:37:28,615 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('common_name', '*.prod3.us-west-2.snowflakecomputing.com')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M02')])
+2024-05-27 17:37:28,617 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M02')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')])
+2024-05-27 17:37:28,617 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')]), issuer: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')])
+2024-05-27 17:37:28,618 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Starfield Technologies, Inc.'), ('organizational_unit_name', 'Starfield Class 2 Certification Authority')])
+2024-05-27 17:37:28,621 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:87   - reading certificate bundle: /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/_MEIBsAm8P/certifi/cacert.pem
+2024-05-27 17:37:28,635 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:413  - not found issuer_der: OrderedDict([('country_name', 'US'), ('organization_name', 'Starfield Technologies, Inc.'), ('organizational_unit_name', 'Starfield Class 2 Certification Authority')])
+2024-05-27 17:37:28,637 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('common_name', '*.prod3.us-west-2.snowflakecomputing.com')])
+2024-05-27 17:37:28,639 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-12-10 00:00:00+00:00
+2024-05-27 17:37:28,640 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M02')])
+2024-05-27 17:37:28,641 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-12-10 00:00:00+00:00
+2024-05-27 17:37:28,641 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')])
+2024-05-27 17:37:28,643 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-05-07 12:00:00+00:00
+2024-05-27 17:37:28,644 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')])
+2024-05-27 17:37:28,646 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:1023 - ok
+2024-05-27 17:37:29,029 (33651/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443 "POST /session/v1/login-request?request_id=b8e64ceb-f8ad-4288-aac2-2db46357d6e9&databaseName=TECHUP_DEMO_DB&schemaName=data_schema&warehouse=TECHUP_DEMO_WH&roleName=TECHUP_DEMO_ROLE&request_guid=d3201451-9e2e-4be1-83cf-37bd01d3293d HTTP/1.1" 200 1483
+2024-05-27 17:37:29,033 (33651/MainThread) snowflake.connector.network DEBUG        network:1092 - SUCCESS
+2024-05-27 17:37:29,034 (33651/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-05-27 17:37:29,034 (33651/MainThread) snowflake.connector.network DEBUG        network:745  - ret[code] = None, after post request
+2024-05-27 17:37:29,034 (33651/MainThread) snowflake.connector.auth._auth DEBUG          _auth:371  - completed authentication
+2024-05-27 17:37:29,035 (33651/MainThread) snowflake.connector.auth._auth DEBUG          _auth:418  - token = ******
+2024-05-27 17:37:29,035 (33651/MainThread) snowflake.connector.auth._auth DEBUG          _auth:424  - master_token = ******
+2024-05-27 17:37:29,035 (33651/MainThread) snowflake.connector.auth._auth DEBUG          _auth:430  - id_token = NULL
+2024-05-27 17:37:29,035 (33651/MainThread) snowflake.connector.auth._auth DEBUG          _auth:436  - mfa_token = NULL
+2024-05-27 17:37:29,038 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:325  - adding connection: 0
+2024-05-27 17:37:29,039 (33651/MainThread) __main__ DEBUG      eventloop:719  - Read from query argument
+2024-05-27 17:37:29,039 (33651/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:292  - sqlsplit: construct SQLDelimiter ;
+2024-05-27 17:37:29,040 (33651/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:293  - use old split_statements that supports delimiter.
+2024-05-27 17:37:29,041 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:416  - secret_free_sql: put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=false overwrite=true;
+2024-05-27 17:37:29,041 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:423  - set()
+2024-05-27 17:37:29,041 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:343  - joining async exec
+2024-05-27 17:37:29,042 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:351  - waiting for async exec to finish...
+2024-05-27 17:37:29,042 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:368  - all async queries finished.
+2024-05-27 17:37:29,042 (33651/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:292  - sqlsplit: construct SQLDelimiter ;
+2024-05-27 17:37:29,042 (33651/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:293  - use old split_statements that supports delimiter.
+2024-05-27 17:37:29,043 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:566  - Regular sql statement. sql: put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=false overwrite=true;
+2024-05-27 17:37:29,043 (33651/MainThread) snowflake.connector.connection DEBUG     connection:806  - cursor
+2024-05-27 17:37:29,044 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:571  - exit_on_error: False, progress_bar: True
+2024-05-27 17:37:29,044 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:903  - executing SQL/command
+2024-05-27 17:37:29,044 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:759  - binding: [put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=...] with input=[None], processed=[{}]
+2024-05-27 17:37:29,044 (33651/MainThread) snowflake.connector.cursor INFO         cursor:971  - query: [put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=...]
+2024-05-27 17:37:29,045 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:614  - Cannot use arrow result format, fallback to json format
+2024-05-27 17:37:29,045 (33651/MainThread) snowflake.connector.connection DEBUG     connection:1582 - sequence counter: 1
+2024-05-27 17:37:29,045 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:633  - Request id: 5dc60c90-b5ae-44da-8c92-fafeefdbd27a
+2024-05-27 17:37:29,046 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:635  - running query [put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=...]
+2024-05-27 17:37:29,046 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:642  - is_file_transfer: True
+2024-05-27 17:37:29,046 (33651/MainThread) snowflake.connector.connection DEBUG     connection:1245 - _cmd_query
+2024-05-27 17:37:29,047 (33651/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:155  - serialize_to_dict() called
+2024-05-27 17:37:29,047 (33651/MainThread) snowflake.connector.connection DEBUG     connection:1272 - sql=[put file://./*.yaml @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE auto_compress=...], sequence_id=[1], is_file_transfer=[True]
+2024-05-27 17:37:29,047 (33651/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-05-27 17:37:29,048 (33651/MainThread) snowflake.connector.network DEBUG        network:875  - remaining request timeout: N/A ms, retry cnt: 1
+2024-05-27 17:37:29,048 (33651/MainThread) snowflake.connector.network DEBUG        network:857  - Request guid: c9ae1553-1df9-49a3-8922-c56b8350bd8c
+2024-05-27 17:37:29,048 (33651/MainThread) snowflake.connector.network DEBUG        network:1065 - socket timeout: 60
+2024-05-27 17:37:29,391 (33651/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=5dc60c90-b5ae-44da-8c92-fafeefdbd27a&request_guid=c9ae1553-1df9-49a3-8922-c56b8350bd8c HTTP/1.1" 200 1450
+2024-05-27 17:37:29,393 (33651/MainThread) snowflake.connector.network DEBUG        network:1092 - SUCCESS
+2024-05-27 17:37:29,393 (33651/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-05-27 17:37:29,394 (33651/MainThread) snowflake.connector.network DEBUG        network:745  - ret[code] = None, after post request
+2024-05-27 17:37:29,394 (33651/MainThread) snowflake.connector.network DEBUG        network:771  - Query id: 01b49ce1-0002-7539-0038-5287006b70ae
+2024-05-27 17:37:29,394 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:978  - sfqid: 01b49ce1-0002-7539-0038-5287006b70ae
+2024-05-27 17:37:29,395 (33651/MainThread) snowflake.connector.cursor INFO         cursor:984  - query execution done
+2024-05-27 17:37:29,395 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:998  - SUCCESS
+2024-05-27 17:37:29,395 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:1017 - PUT OR GET: True
+2024-05-27 17:37:29,396 (33651/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:851  - UPLOAD
+2024-05-27 17:37:29,399 (33651/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:977  - command type: UPLOAD
+2024-05-27 17:37:29,406 (33651/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:1142 - no file encoding was detected: file=/Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:37:29,410 (33651/MainThread) snowflake.connector.vendored.urllib3.util.retry DEBUG          retry:351  - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-05-27 17:37:29,411 (33651/MainThread) snowflake.connector.vendored.urllib3.util.retry DEBUG          retry:351  - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-05-27 17:37:29,411 (33651/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 1/1 active sessions
+2024-05-27 17:37:29,411 (33651/MainThread) snowflake.connector.storage_client DEBUG storage_client:286  - storage client request with session <snowflake.connector.vendored.requests.sessions.Session object at 0x111e9d730>
+2024-05-27 17:37:29,473 (33651/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:1019 - Starting new HTTPS connection (1): sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com:443
+2024-05-27 17:37:29,994 (33651/MainThread) snowflake.connector.ssl_wrap_socket DEBUG ssl_wrap_socket:79   - OCSP Mode: FAIL_OPEN, OCSP response cache file name: None
+2024-05-27 17:37:29,995 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:530  - ocsp_response_cache_uri: file:///Users/mkobel/Library/Caches/Snowflake/ocsp_response_cache.json
+2024-05-27 17:37:29,996 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:533  - OCSP_VALIDATION_CACHE size: 294
+2024-05-27 17:37:29,996 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:332  - OCSP response cache server is enabled: http://ocsp.snowflakecomputing.com/ocsp_response_cache.json
+2024-05-27 17:37:29,997 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:345  - OCSP dynamic cache server RETRY URL: None
+2024-05-27 17:37:29,997 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:966  - validating certificate: sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com
+2024-05-27 17:37:29,997 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:385  - # of certificates: 4
+2024-05-27 17:37:30,000 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('common_name', '*.s3.amazonaws.com')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M01')])
+2024-05-27 17:37:30,001 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M01')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')])
+2024-05-27 17:37:30,003 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')]), issuer: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')])
+2024-05-27 17:37:30,004 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:390  - subject: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')]), issuer: OrderedDict([('country_name', 'US'), ('organization_name', 'Starfield Technologies, Inc.'), ('organizational_unit_name', 'Starfield Class 2 Certification Authority')])
+2024-05-27 17:37:30,007 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:413  - not found issuer_der: OrderedDict([('country_name', 'US'), ('organization_name', 'Starfield Technologies, Inc.'), ('organizational_unit_name', 'Starfield Class 2 Certification Authority')])
+2024-05-27 17:37:30,009 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('common_name', '*.s3.amazonaws.com')])
+2024-05-27 17:37:30,012 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-12-10 00:00:00+00:00
+2024-05-27 17:37:30,012 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon RSA 2048 M01')])
+2024-05-27 17:37:30,014 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-12-10 00:00:00+00:00
+2024-05-27 17:37:30,015 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('organization_name', 'Amazon'), ('common_name', 'Amazon Root CA 1')])
+2024-05-27 17:37:30,017 (33651/MainThread) snowflake.connector.ocsp_asn1crypto DEBUG ocsp_asn1crypto:205  - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-05-07 12:00:00+00:00
+2024-05-27 17:37:30,017 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:730  - hit cache for subject: OrderedDict([('country_name', 'US'), ('state_or_province_name', 'Arizona'), ('locality_name', 'Scottsdale'), ('organization_name', 'Starfield Technologies, Inc.'), ('common_name', 'Starfield Services Root Certificate Authority - G2')])
+2024-05-27 17:37:30,020 (33651/MainThread) snowflake.connector.ocsp_snowflake DEBUG ocsp_snowflake:1023 - ok
+2024-05-27 17:37:30,273 (33651/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com:443 "GET /?accelerate HTTP/1.1" 403 None
+2024-05-27 17:37:30,274 (33651/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 0/1 active sessions
+2024-05-27 17:37:30,274 (33651/MainThread) snowflake.connector.storage_client DEBUG storage_client:449  - cleaning up tmp dir: /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpjaf6zr5m
+2024-05-27 17:37:30,275 (33651/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:424  - parallel=[4]
+2024-05-27 17:37:30,275 (33651/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:447  - Chunk ThreadPoolExecutor size: 4
+2024-05-27 17:37:30,276 (33651/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:187  - Preprocessing /Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:37:30,277 (33651/ThreadPoolExecutor-1_0) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 1/1 active sessions
+2024-05-27 17:37:30,277 (33651/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:286  - storage client request with session <snowflake.connector.vendored.requests.sessions.Session object at 0x111e9d730>
+2024-05-27 17:37:30,536 (33651/ThreadPoolExecutor-1_0) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com:443 "HEAD /3jwb0000-s/stages/c7540ae4-518a-4576-81cb-504c6d8c208f/techup_template_git_job.yaml HTTP/1.1" 200 0
+2024-05-27 17:37:30,537 (33651/ThreadPoolExecutor-1_0) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 0/1 active sessions
+2024-05-27 17:37:30,538 (33651/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:134  - getting digest file=/Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:37:30,539 (33651/ThreadPoolExecutor-1_0) snowflake.connector.file_util DEBUG      file_util:150  - getting digest and size: CHJ+s0dGH6pajrKJU2kiOyFtWASaC4+VkIJ7fRRUAZk=, 529, file=/Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:37:30,540 (33651/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:228  - Preparing to upload /Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:37:30,540 (33651/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:150  - encrypting file=/Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml
+2024-05-27 17:37:30,541 (33651/ThreadPoolExecutor-1_0) snowflake.connector.encryption_util DEBUG encryption_util:138  - unencrypted file: /Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml, temp file: /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpsnj2ivu2/techup_template_git_job.yaml#ua_tufp_, tmp_dir: /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpsnj2ivu2
+2024-05-27 17:37:30,542 (33651/ThreadPoolExecutor-1_0) snowflake.connector.encryption_util DEBUG encryption_util:75   - key_size = 16
+2024-05-27 17:37:30,543 (33651/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:234  - finished preprocessing
+2024-05-27 17:37:30,543 (33651/ThreadPoolExecutor-1_0) snowflake.connector.storage_client DEBUG storage_client:239  - number of chunks 1
+2024-05-27 17:37:30,543 (33651/ThreadPoolExecutor-1_0) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:482  - Finished preparing file techup_template_git_job.yaml
+2024-05-27 17:37:30,544 (33651/ThreadPoolExecutor-0_0) snowflake.connector.storage_client DEBUG storage_client:413  - Uploading chunk 0 of file /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpsnj2ivu2/techup_template_git_job.yaml#ua_tufp_
+2024-05-27 17:37:30,544 (33651/ThreadPoolExecutor-0_0) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 1/1 active sessions
+2024-05-27 17:37:30,544 (33651/ThreadPoolExecutor-0_0) snowflake.connector.storage_client DEBUG storage_client:286  - storage client request with session <snowflake.connector.vendored.requests.sessions.Session object at 0x111e9d730>
+2024-05-27 17:37:30,821 (33651/ThreadPoolExecutor-0_0) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com:443 "PUT /3jwb0000-s/stages/c7540ae4-518a-4576-81cb-504c6d8c208f/techup_template_git_job.yaml HTTP/1.1" 200 0
+2024-05-27 17:37:30,823 (33651/ThreadPoolExecutor-0_0) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'b'sfc-prod3-ds1-18-customer-stage.s3.amazonaws.com'', SessionPool 0/1 active sessions
+2024-05-27 17:37:30,823 (33651/ThreadPoolExecutor-0_0) snowflake.connector.storage_client DEBUG storage_client:415  - Successfully uploaded chunk 0 of file /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpsnj2ivu2/techup_template_git_job.yaml#ua_tufp_
+2024-05-27 17:37:30,823 (33651/ThreadPoolExecutor-0_0) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:528  - Chunk 0/1 of file techup_template_git_job.yaml reached callback
+2024-05-27 17:37:30,824 (33651/ThreadPoolExecutor-0_0) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:544  - Chunk progress: techup_template_git_job.yaml: completed: 1 failed: 0 total: 1
+2024-05-27 17:37:30,824 (33651/ThreadPoolExecutor-0_0) snowflake.connector.storage_client DEBUG storage_client:255  - /Users/mkobel/workspaces/spcs_emea_techup/templates/./techup_template_git_job.yaml upload is completed.
+2024-05-27 17:37:30,825 (33651/ThreadPoolExecutor-0_0) snowflake.connector.storage_client DEBUG storage_client:449  - cleaning up tmp dir: /var/folders/zn/qsj0l7g14kz5yc11c02qxj7r0000gp/T/tmpsnj2ivu2
+2024-05-27 17:37:30,826 (33651/MainThread) snowflake.connector.file_transfer_agent DEBUG file_transfer_agent:734  - raise_put_get_error: False, UPLOADED, <class 'str'>, ResultStatus.ERROR, <enum 'ResultStatus'>
+2024-05-27 17:37:30,828 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:1130 - Query result format: json
+2024-05-27 17:37:30,828 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:37:30,828 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:37:30,829 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: FIXED, Format: None
+2024-05-27 17:37:30,829 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: FIXED, Format: None
+2024-05-27 17:37:30,829 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:37:30,829 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:37:30,830 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:37:30,830 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:37:30,830 (33651/MainThread) snowflake.connector.result_batch DEBUG   result_batch:487  - parsing for result batch id: 1
+2024-05-27 17:37:30,831 (33651/MainThread) snowflake.connector.result_set DEBUG     result_set:68   - beginning to schedule result batch downloads
+2024-05-27 17:37:30,831 (33651/MainThread) __main__ DEBUG      eventloop:770  - headers: [('source', 2), ('target', 2), ('source_size', 0), ('target_size', 0), ('source_compression', 2), ('target_compression', 2), ('status', 2), ('message', 2)]
+2024-05-27 17:37:30,832 (33651/MainThread) __main__ DEBUG      eventloop:772  - rows: "[['techup_template_git_job.yaml', 'techup_template_git_job.yaml', '529', '544', 'NONE', 'NONE', 'UPLOADED', '']]"
+2024-05-27 17:37:30,832 (33651/MainThread) snowflake.cli.tabulate DEBUG       tabulate:645  - minwidths: [28, 28, 11, 11, 18, 18, 8, 7]
+2024-05-27 17:37:30,832 (33651/MainThread) snowflake.cli.tabulate DEBUG       tabulate:654  - headers: ['source                      ', 'target                      ', 'source_size', 'target_size', 'source_compression', 'target_compression', 'status  ', 'message'], minwidths: [28, 28, 11, 11, 18, 18, 8, 7]
+2024-05-27 17:37:30,833 (33651/MainThread) __main__ DEBUG      eventloop:869  - Command Time: 1.793626070022583
+2024-05-27 17:37:30,833 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:416  - secret_free_sql: list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;
+2024-05-27 17:37:30,834 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:423  - {('__rowcount', '...'), ('__sfqid', '...')}
+2024-05-27 17:37:30,834 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:343  - joining async exec
+2024-05-27 17:37:30,834 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:351  - waiting for async exec to finish...
+2024-05-27 17:37:30,834 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:368  - all async queries finished.
+2024-05-27 17:37:30,834 (33651/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:292  - sqlsplit: construct SQLDelimiter ;
+2024-05-27 17:37:30,834 (33651/MainThread) snowflake.cli.sqlsplit DEBUG       sqlsplit:293  - use old split_statements that supports delimiter.
+2024-05-27 17:37:30,834 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:566  - Regular sql statement. sql: list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;
+2024-05-27 17:37:30,835 (33651/MainThread) snowflake.connector.connection DEBUG     connection:806  - cursor
+2024-05-27 17:37:30,835 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:571  - exit_on_error: False, progress_bar: True
+2024-05-27 17:37:30,835 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:903  - executing SQL/command
+2024-05-27 17:37:30,835 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:759  - binding: [list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;] with input=[None], processed=[{}]
+2024-05-27 17:37:30,835 (33651/MainThread) snowflake.connector.cursor INFO         cursor:971  - query: [list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;]
+2024-05-27 17:37:30,835 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:614  - Cannot use arrow result format, fallback to json format
+2024-05-27 17:37:30,835 (33651/MainThread) snowflake.connector.connection DEBUG     connection:1582 - sequence counter: 2
+2024-05-27 17:37:30,836 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:633  - Request id: c12ba8c3-18fa-4cf8-9342-45639d40af3d
+2024-05-27 17:37:30,836 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:635  - running query [list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;]
+2024-05-27 17:37:30,836 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:642  - is_file_transfer: True
+2024-05-27 17:37:30,836 (33651/MainThread) snowflake.connector.connection DEBUG     connection:1245 - _cmd_query
+2024-05-27 17:37:30,836 (33651/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:155  - serialize_to_dict() called
+2024-05-27 17:37:30,836 (33651/MainThread) snowflake.connector.connection DEBUG     connection:1272 - sql=[list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;], sequence_id=[2], is_file_transfer=[False]
+2024-05-27 17:37:30,836 (33651/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-05-27 17:37:30,836 (33651/MainThread) snowflake.connector.network DEBUG        network:875  - remaining request timeout: N/A ms, retry cnt: 1
+2024-05-27 17:37:30,837 (33651/MainThread) snowflake.connector.network DEBUG        network:857  - Request guid: f4e9c23d-107e-4dd4-97d9-8fbb8d1e8c35
+2024-05-27 17:37:30,837 (33651/MainThread) snowflake.connector.network DEBUG        network:1065 - socket timeout: 60
+2024-05-27 17:37:31,162 (33651/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=c12ba8c3-18fa-4cf8-9342-45639d40af3d&request_guid=f4e9c23d-107e-4dd4-97d9-8fbb8d1e8c35 HTTP/1.1" 200 1354
+2024-05-27 17:37:31,165 (33651/MainThread) snowflake.connector.network DEBUG        network:1092 - SUCCESS
+2024-05-27 17:37:31,166 (33651/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-05-27 17:37:31,167 (33651/MainThread) snowflake.connector.network DEBUG        network:745  - ret[code] = None, after post request
+2024-05-27 17:37:31,167 (33651/MainThread) snowflake.connector.network DEBUG        network:771  - Query id: 01b49ce1-0002-753a-0038-5287006b411a
+2024-05-27 17:37:31,167 (33651/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:189  - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1716831451153977, 'priority': 0}]}
+2024-05-27 17:37:31,168 (33651/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:230  - deserialize {'id': 0, 'timestamp': 1716831451153977, 'priority': 0}
+2024-05-27 17:37:31,168 (33651/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:101  - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-05-27 17:37:31,169 (33651/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:127  - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-05-27 17:37:31,169 (33651/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:136  - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-05-27 17:37:31,169 (33651/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:269  - deserialize_json_dict() returns
+2024-05-27 17:37:31,170 (33651/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:274  - Cache Entry: (0, 1716831451153977, 0)
+2024-05-27 17:37:31,170 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:978  - sfqid: 01b49ce1-0002-753a-0038-5287006b411a
+2024-05-27 17:37:31,171 (33651/MainThread) snowflake.connector.cursor INFO         cursor:984  - query execution done
+2024-05-27 17:37:31,171 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:998  - SUCCESS
+2024-05-27 17:37:31,171 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:1017 - PUT OR GET: False
+2024-05-27 17:37:31,171 (33651/MainThread) snowflake.connector.cursor DEBUG         cursor:1130 - Query result format: json
+2024-05-27 17:37:31,171 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:37:31,172 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: FIXED, Format: None
+2024-05-27 17:37:31,172 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:37:31,172 (33651/MainThread) snowflake.connector.converter_snowsql DEBUG converter_snowsql:96   - Type: TEXT, Format: None
+2024-05-27 17:37:31,172 (33651/MainThread) snowflake.connector.result_batch DEBUG   result_batch:487  - parsing for result batch id: 3
+2024-05-27 17:37:31,172 (33651/MainThread) snowflake.connector.cursor INFO         cursor:1144 - Number of results in first chunk: 3
+2024-05-27 17:37:31,173 (33651/MainThread) snowflake.connector.result_set DEBUG     result_set:68   - beginning to schedule result batch downloads
+2024-05-27 17:37:31,173 (33651/MainThread) __main__ DEBUG      eventloop:770  - headers: [('name', 2), ('size', 0), ('md5', 2), ('last_modified', 2)]
+2024-05-27 17:37:31,173 (33651/MainThread) __main__ DEBUG      eventloop:772  - rows: "[['techup_demo_stage/techup_git_job.yaml', '528', 'c107e1aaa546b033aac8899b3fc4a697', 'Mon, 27 May 2024 12:24:51 GMT'], ['techup_demo_stage/techup_job.yaml', '272', 'fb3036472df07074ca7610fbc5bda524', 'Mon, 27 May 2024 12:20:25 GMT'], ['techup_demo_sta..."
+2024-05-27 17:37:31,174 (33651/MainThread) snowflake.cli.tabulate DEBUG       tabulate:645  - minwidths: [46, 4, 32, 29]
+2024-05-27 17:37:31,174 (33651/MainThread) snowflake.cli.tabulate DEBUG       tabulate:654  - headers: ['name                                          ', 'size', 'md5                             ', 'last_modified                '], minwidths: [46, 4, 32, 29]
+2024-05-27 17:37:31,175 (33651/MainThread) __main__ DEBUG      eventloop:869  - Command Time: 0.34134697914123535
+2024-05-27 17:37:31,175 (33651/MainThread) __main__ DEBUG      eventloop:841  - end of SQL: list @TECHUP_DEMO_DB.DATA_SCHEMA.TECHUP_DEMO_STAGE;
+2024-05-27 17:37:31,176 (33651/MainThread) __main__ DEBUG      eventloop:628  - closing sessions
+2024-05-27 17:37:31,176 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:376  - closing connections
+2024-05-27 17:37:31,176 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:343  - joining async exec
+2024-05-27 17:37:31,176 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:351  - waiting for async exec to finish...
+2024-05-27 17:37:31,177 (33651/MainThread) snowflake.cli.sqlexecute DEBUG     sqlexecute:368  - all async queries finished.
+2024-05-27 17:37:31,177 (33651/MainThread) snowflake.connector.connection INFO     connection:734  - closed
+2024-05-27 17:37:31,177 (33651/MainThread) snowflake.connector.telemetry DEBUG      telemetry:211  - Closing telemetry client.
+2024-05-27 17:37:31,178 (33651/MainThread) snowflake.connector.telemetry DEBUG      telemetry:176  - Sending 1 logs to telemetry. Data is {'logs': [{'message': {'driver_type': 'PythonConnector', 'driver_version': '3.7.1', 'source': 'SnowSQL', 'type': 'client_imported_packages', 'value': "{'urllib', 'random', 'keyring', 'requests', 'calendar', 'copyreg', 'tempfile', 'argparse', 'inspect', 'sysconfig', 'quopri', 'collections', 'gzip', 'heapq', 'configobj', 'bz2', 'genericpath', 'difflib', 'html', 'pyexpat', 'functools', 'keyrings', 'colorama', 'stat', 'linecache', 'importlib_metadata', 'dis', 'prompt_toolkit', 'gettext', 'io', 'token', 'asn1crypto', 'atexit', 'datetime', 'sqlparse', 'urllib3', 'packaging', 'idna', 'http', 'pwd', 'queue', 'sre_compile', 'json', 'zlib', 'array', 'shlex', 'ipaddress', 'stringprep', 'filelock', 'bisect', 'enum', 'sortedcontainers', 'itertools', 'base64', 'six', 'zipp', 'fnmatch', 'math', 'ssl', 'tomlkit', 'typing', 'pkgutil', 'fcntl', 'cryptography', 'typing_extensions', 'codecs', 'errno', 'multiprocessing', 'selectors', 'jwt', 'locale', 'certifi', 'posixpath', 'importlib', 'pygments', 'tokenize', 'pathlib', 'pyimod04_ctypes', 'platformdirs', 're', 'getpass', 'opcode', 'encodings', 'ntpath', 'textwrap', 'pytz', 'secrets', 'lzma', 'click', 'reprlib', 'webbrowser', 'sre_constants', 'plistlib', 'subprocess', 'platform', 'builtins', 'threading', 'jaraco', 'configparser', 'marshal', 'traceback', 'sre_parse', 'zipimport', 'email', 'pkg_resources', 'keyword', 'binascii', 'pyimod01_os_path', 'dataclasses', 'hmac', 'ast', 'termios', 'signal', 'numbers', 'os', 'weakref', 'csv', 'pickle', 'decimal', 'runpy', 'wcwidth', 'socket', 'mimetypes', 'unicodedata', 'hashlib', 'glob', 'charset_normalizer', 'warnings', 'operator', 'pyimod02_archive', 'struct', 'snowflake', 'pyimod03_importers', 'posix', 'uu', 'tty', 'copy', 'contextlib', 'shutil', 'concurrent', 'sys', 'fractions', 'uuid', 'time', 'string', 'OpenSSL', 'select', 'types', 'zipfile', 'abc', 'logging', 'ctypes', 'grp', 'xml'}"}, 'timestamp': '1716831449037'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.7.1', 'source': 'SnowSQL', 'type': 'client_time_consume_last_result', 'query_id': '01b49ce1-0002-7539-0038-5287006b70ae', 'value': 1436}, 'timestamp': '1716831450831'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.7.1', 'source': 'SnowSQL', 'type': 'client_time_consume_first_result', 'query_id': '01b49ce1-0002-753a-0038-5287006b411a', 'value': 10}, 'timestamp': '1716831451171'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.7.1', 'source': 'SnowSQL', 'type': 'client_time_consume_last_result', 'query_id': '01b49ce1-0002-753a-0038-5287006b411a', 'value': 2}, 'timestamp': '1716831451173'}]}.
+2024-05-27 17:37:31,181 (33651/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-05-27 17:37:31,181 (33651/MainThread) snowflake.connector.network DEBUG        network:875  - remaining request timeout: 5000 ms, retry cnt: 1
+2024-05-27 17:37:31,181 (33651/MainThread) snowflake.connector.network DEBUG        network:857  - Request guid: 7401d4f0-d8c6-442c-894e-acd699d03bea
+2024-05-27 17:37:31,181 (33651/MainThread) snowflake.connector.network DEBUG        network:1065 - socket timeout: 60
+2024-05-27 17:37:31,425 (33651/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443 "POST /telemetry/send?request_guid=7401d4f0-d8c6-442c-894e-acd699d03bea HTTP/1.1" 200 86
+2024-05-27 17:37:31,427 (33651/MainThread) snowflake.connector.network DEBUG        network:1092 - SUCCESS
+2024-05-27 17:37:31,427 (33651/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-05-27 17:37:31,427 (33651/MainThread) snowflake.connector.network DEBUG        network:745  - ret[code] = None, after post request
+2024-05-27 17:37:31,428 (33651/MainThread) snowflake.connector.telemetry DEBUG      telemetry:200  - Successfully uploading metrics to telemetry.
+2024-05-27 17:37:31,428 (33651/MainThread) snowflake.connector.connection INFO     connection:740  - No async queries seem to be running, deleting session
+2024-05-27 17:37:31,428 (33651/MainThread) snowflake.connector.network DEBUG        network:1224 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-05-27 17:37:31,429 (33651/MainThread) snowflake.connector.network DEBUG        network:875  - remaining request timeout: 5000 ms, retry cnt: 1
+2024-05-27 17:37:31,429 (33651/MainThread) snowflake.connector.network DEBUG        network:857  - Request guid: 322e21dc-3358-4744-b0b9-62b9e8c4a75f
+2024-05-27 17:37:31,429 (33651/MainThread) snowflake.connector.network DEBUG        network:1065 - socket timeout: 60
+2024-05-27 17:37:31,685 (33651/MainThread) snowflake.connector.vendored.urllib3.connectionpool DEBUG connectionpool:474  - https://sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com:443 "POST /session?delete=true&request_guid=322e21dc-3358-4744-b0b9-62b9e8c4a75f HTTP/1.1" 200 76
+2024-05-27 17:37:31,688 (33651/MainThread) snowflake.connector.network DEBUG        network:1092 - SUCCESS
+2024-05-27 17:37:31,688 (33651/MainThread) snowflake.connector.network DEBUG        network:1229 - Session status for SessionPool 'sfseeurope-aws_us_west_2_snowflake_demo.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-05-27 17:37:31,689 (33651/MainThread) snowflake.connector.network DEBUG        network:745  - ret[code] = None, after post request
+2024-05-27 17:37:31,695 (33651/MainThread) snowflake.connector._query_context_cache DEBUG _query_context_cache:141  - clear_cache() called
+2024-05-27 17:37:31,695 (33651/MainThread) snowflake.connector.connection DEBUG     connection:753  - Session is closed

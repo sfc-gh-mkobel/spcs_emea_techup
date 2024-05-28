@@ -26,4 +26,15 @@ select
   ,v.value:message::varchar message
 from (select parse_json(system$get_service_status('TECHUP_DEMO_SERVICE'))) t,
 lateral flatten(input => t.$1) v;
+
+
+EXECUTE JOB SERVICE
+IN COMPUTE POOL TECHUP_DEMO_COMPUTE_POOL
+using(git_repo_url=>'https://github.com/sfc-gh-mkobel/python-code.git',repo_name=>'python-code',main_file_name=>'main.py')
+NAME=TECHUP_TEMPLATE_GIT_JOB_SERVICE
+EXTERNAL_ACCESS_INTEGRATIONS = (GIT_ACCESS_INTEGRATION)
+FROM @TECHUP_DEMO_STAGE
+SPEC='techup_template_git_job.yaml';
+
+
 ```

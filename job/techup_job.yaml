@@ -7,9 +7,3 @@ spec:
     args:
     - "--query=select current_time() as time,'hello'"
     - "--result_table=results"
-    volumeMounts:
-      - name: localmount
-        mountPath: /dev-local
-  volumes:                           
-    - name: localmount
-      source: local 
