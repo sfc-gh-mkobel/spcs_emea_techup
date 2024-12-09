@@ -2,8 +2,6 @@ spec:
   container:
   - name: main
     image: /TECHUP_DEMO_DB/DATA_SCHEMA/TECHUP_DEMO_REPOSITORY/techup_git_job_service:latest
-    env:
-      SNOWFLAKE_WAREHOUSE: TECHUP_DEMO_WH
     args:
     - "--git_repo_url=https://github.com/sfc-gh-mkobel/python-code.git"
     - "--repo_name=python-code"

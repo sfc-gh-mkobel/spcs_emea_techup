@@ -1,0 +1,9 @@
+.packages/
+.venv/
+app.zip
+__pycache__
+/snowflake-cli/example_streamlit/secrets.toml
+.DS_Store
+.vscode
+.snowsql_rt.log
+snowsql_rt.log_bootstrap

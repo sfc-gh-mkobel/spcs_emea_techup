@@ -33,12 +33,18 @@ upload_yaml: ## upload yaml to stage $(SS_STAGE)
 		put file://./*.yaml @$(SS_DB).$(SS_SCHEMA).$(SS_STAGE) auto_compress=false overwrite=true; \
 		list @$(SS_DB).$(SS_SCHEMA).$(SS_STAGE); \
 		"
+docker_login:
+	snow spcs image-registry token --format=JSON --connection=spcs_us_west_2_sso | docker login $(ACCOUNT_URL) -u 0sessiontoken --password-stdin
+
+push_docker: ## tag and push the containers to the repo $(IMAGE_REGISTRY)
+	docker push $(IMAGE_REGISTRY)/$(SS_SERVICE_NAME)
+
 
 ######################## COMPOSITE TARGETS ######################
 
 build_and_run_docker_locally: build_docker run_docker_locally
 
-build_and_push_docker: build_docker tag_docker push_docker
+build_and_push_docker: build_docker tag_docker docker_login push_docker
 
 tag_and_push_docker: tag_docker push_docker
 
